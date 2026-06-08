@@ -1,438 +1,270 @@
-\# Decentralized Blockchain Application
+Decentralized Blockchain Application
 
+Introduction
 
+A Decentralized Blockchain Application developed using Python and Django to demonstrate the working principles of blockchain technology and decentralized networks. The application allows users to create transactions, add peers to a blockchain network, store transactions inside blocks, and view the complete blockchain ledger.
 
-\## 📌 Project Overview
+The primary objective of this project is to understand how blockchain systems maintain data integrity through chained blocks and decentralized data management without relying on a central authority.
 
+The backend is designed using Django and implements blockchain concepts such as peer management, transaction management, block creation, and blockchain visualization.
 
+Technologies and Dependencies Used
 
-The Decentralized Blockchain Application is a web-based blockchain management system developed using Python and Django. The application demonstrates the fundamental concepts of blockchain technology, including transaction creation, block generation, decentralized peer management, and blockchain visualization.
+• Python used as the primary programming language.
+• Django used to build the web application and manage backend operations.
+• HTML used to create user interfaces.
+• CSS used for styling web pages.
+• SQLite used as the database for storing application data.
+• Blockchain data structures used to implement decentralized ledger functionality.
 
+Using Decentralized Blockchain Application
 
-
-This project was built to understand how blockchain networks maintain data integrity through linked blocks and decentralized architecture. It provides a practical implementation of blockchain concepts through an interactive web interface.
-
-
-
-\---
-
-
-
-\## 🎯 Objectives
-
-
-
-\* Understand blockchain architecture and working principles.
-
-\* Implement transaction storage using blocks.
-
-\* Simulate decentralized peer-to-peer communication.
-
-\* Explore data immutability and chain validation.
-
-\* Develop a web application using Django framework.
-
-
-
-\---
-
-
-
-\## ✨ Features
-
-
-
-\### Peer Management
-
-
-
-\* Add new peers (nodes) to the blockchain network.
-
-\* Maintain a decentralized network structure.
-
-
-
-\### Transaction Processing
-
-
-
-\* Create and store transactions.
-
-\* Validate transaction data before adding to blocks.
-
-
-
-\### Block Creation
-
-
-
-\* Group transactions into blocks.
-
-\* Link blocks using previous block references.
-
-
-
-\### Blockchain Visualization
-
-
-
-\* Display the complete blockchain ledger.
-
-\* View block details and transaction history.
-
-
-
-\### Web Interface
-
-
-
-\* User-friendly interface built using HTML and CSS.
-
-\* Easy navigation between blockchain operations.
-
-
-
-\---
-
-
-
-\## 🏗️ System Architecture
-
-
-
-```text
-
-User
-
-&#x20; │
-
-&#x20; ▼
-
-Django Web Application
-
-&#x20; │
-
-&#x20; ├── Add Peer
-
-&#x20; ├── Create Transaction
-
-&#x20; ├── Add Transaction To Block
-
-&#x20; └── View Blockchain
-
-&#x20;         │
-
-&#x20;         ▼
-
-&#x20;     Blockchain Layer
-
-&#x20;         │
-
-&#x20;         ▼
-
-&#x20;     Block Storage
-
-```
-
-
-
-\---
-
-
-
-\## 🛠️ Technologies Used
-
-
-
-| Technology          | Purpose                             |
-
-| ------------------- | ----------------------------------- |
-
-| Python              | Core Programming Language           |
-
-| Django              | Web Framework                       |
-
-| HTML                | Frontend Structure                  |
-
-| CSS                 | User Interface Styling              |
-
-| SQLite              | Database Management                 |
-
-| Blockchain Concepts | Decentralized Ledger Implementation |
-
-
-
-\---
-
-
-
-\## 📂 Project Structure
-
-
-
-```text
-
-Decentralized-Blockchain-Application/
-
-│
-
-├── BC/
-
-│   ├── Block.py
-
-│   ├── Blockchain.py
-
-│
-
-├── Blockchain/
-
-│   ├── settings.py
-
-│   ├── urls.py
-
-│   ├── wsgi.py
-
-│
-
-├── BlockchainApp/
-
-│   ├── templates/
-
-│   │   ├── index.html
-
-│   │   ├── AddPeer.html
-
-│   │   ├── AddToBlock.html
-
-│   │   ├── Transactions.html
-
-│   │   └── ViewChain.html
-
-│   │
-
-│   ├── static/
-
-│   │   └── style.css
-
-│   │
-
-│   ├── views.py
-
-│   ├── urls.py
-
-│
-
-├── manage.py
-
-├── README.md
-
-```
-
-
-
-\---
-
-
-
-\## ⚙️ Installation and Setup
-
-
-
-\### Step 1: Clone Repository
-
-
+CLI -->
 
 ```bash
-
 git clone https://github.com/sanjupeddaboina/Decentralized-Blockchain-Application.git
-
-```
-
-
-
-\### Step 2: Navigate to Project
-
-
-
-```bash
-
 cd Decentralized-Blockchain-Application
-
-```
-
-
-
-\### Step 3: Install Django
-
-
-
-```bash
-
 pip install django
-
-```
-
-
-
-\### Step 4: Run Application
-
-
-
-```bash
-
 python manage.py runserver
-
 ```
 
-
-
-\### Step 5: Open Browser
-
-
+Open Browser -->
 
 ```text
-
 http://127.0.0.1:8000/
-
 ```
 
+Backend Design
 
+Main Components
 
-\---
+The application consists of four major modules:
 
+• Peer Management
+• Transaction Management
+• Block Management
+• Blockchain Management
 
+These modules work together to simulate a decentralized blockchain network.
 
-\## 🚀 Application Workflow
+Entities
 
+Peer
 
+A Peer represents a node participating in the blockchain network.
 
-1\. Launch the application.
+Attributes:
 
-2\. Add peers to the decentralized network.
+• Peer Id
+• Peer Information
+• Network Details
 
-3\. Create transactions.
+Responsibilities:
 
-4\. Add transactions to blocks.
+• Join the blockchain network.
+• Participate in decentralized communication.
+• Maintain blockchain consistency.
 
-5\. Generate blockchain records.
+Transaction
 
-6\. View the blockchain ledger.
+A Transaction represents an activity performed by a user which needs to be recorded on the blockchain.
 
-7\. Verify block relationships and transaction history.
+Attributes:
 
+• Transaction Id
+• Sender Information
+• Receiver Information
+• Transaction Description
+• Timestamp
 
+Responsibilities:
 
-\---
+• Store transaction information.
+• Validate transaction data.
+• Wait for block creation.
+• Become a permanent part of the blockchain once added to a block.
 
+Block
 
+A Block is the fundamental storage unit of the blockchain.
 
-\## 📖 Blockchain Concepts Implemented
+Attributes:
 
+• Block Id
+• Previous Block Reference
+• Transaction Data
+• Timestamp
 
+Responsibilities:
 
-\### Block
+• Store one or more transactions.
+• Maintain linkage with previous blocks.
+• Preserve blockchain integrity.
 
+Blockchain
 
+Blockchain is a collection of interconnected blocks arranged sequentially.
 
-A block stores transaction data and maintains a reference to the previous block.
+Attributes:
 
+• Chain of Blocks
+• Validation Information
+• Network State
 
+Responsibilities:
 
-\### Blockchain
+• Maintain complete transaction history.
+• Ensure data integrity.
+• Preserve immutability of records.
 
+Relationships Between Entities
 
+• Peer participates in blockchain operations.
+• Transactions are created and managed within the network.
+• Transactions are stored inside blocks.
+• Blocks are linked together to form a blockchain.
 
-A chain of blocks connected sequentially to preserve data integrity.
+Relationship Flow
 
+```text
+Peer
+ |
+Transaction
+ |
+Block
+ |
+Blockchain
+```
 
+Functionalities Exposed
 
-\### Decentralization
+Home Page
 
+Provides navigation to all blockchain operations.
 
+Users can:
 
-Network information is distributed among peers instead of relying on a central authority.
+• Add peers.
+• Create transactions.
+• Add transactions to blocks.
+• View blockchain.
 
+Add Peer
 
+Allows users to register a peer into the decentralized network.
 
-\### Immutability
+Operations:
 
+• Accept peer details.
+• Store peer information.
+• Update network state.
 
+Create Transaction
 
-Once a block is added to the chain, its contents cannot be modified without affecting subsequent blocks.
+Allows users to create a blockchain transaction.
 
+Operations:
 
+• Validate transaction information.
+• Store transaction details.
+• Prepare transaction for block creation.
 
-\---
+Add To Block
 
+Allows pending transactions to be added into a blockchain block.
 
+Operations:
 
-\## 🎓 Learning Outcomes
+• Retrieve transaction data.
+• Create a block.
+• Associate transactions with the block.
+• Link the block with the previous block.
 
+View Chain
 
+Displays the complete blockchain ledger.
 
-Through this project, the following concepts were explored:
+Operations:
 
+• Retrieve all blocks.
+• Display transaction history.
+• Show blockchain structure.
 
+Blockchain Workflow
 
-\* Blockchain Fundamentals
+Step 1: A peer joins the network.
 
-\* Data Structures
+Step 2: A transaction is created.
 
-\* Decentralized Systems
+Step 3: The transaction is stored temporarily.
 
-\* Django Framework
+Step 4: The transaction is added into a block.
 
-\* Backend Development
+Step 5: The block is linked to the previous block.
 
-\* Transaction Processing
+Step 6: The blockchain is updated.
 
-\* Block Validation Mechanisms
+Step 7: Users can view the updated blockchain ledger.
 
+Project Structure
 
+```text
+Decentralized-Blockchain-Application
+│
+├── BC
+│   ├── Block.py
+│   └── Blockchain.py
+│
+├── Blockchain
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── BlockchainApp
+│   ├── templates
+│   ├── static
+│   ├── views.py
+│   └── urls.py
+│
+├── manage.py
+├── Screenshots.docx
+└── README.md
+```
 
-\---
+Project Highlights
 
+• Developed a Decentralized Blockchain Application using Python and Django.
+• Implemented blockchain concepts such as transactions, blocks, and chain management.
+• Designed modules for peer management, transaction processing, and blockchain visualization.
+• Built a web-based interface for creating transactions and viewing blockchain data.
+• Demonstrated blockchain data integrity through linked blocks and transaction history management.
+• Simulated decentralized network operations through peer registration and transaction handling.
 
+Learning Outcomes
 
-\## 🔮 Future Enhancements
+This project provided practical experience in:
 
+• Blockchain Fundamentals.
+• Decentralized Network Architecture.
+• Transaction Processing and Validation.
+• Block Creation and Chain Management.
+• Python Backend Development.
+• Django Framework Development.
+• Database Integration using SQLite.
+• Data Integrity and Ledger Management.
 
+Future Improvements
 
-\* User Authentication and Authorization
+• User Authentication and Authorization.
+• Advanced Cryptographic Hashing Algorithms.
+• Smart Contract Integration.
+• Distributed Peer-to-Peer Communication.
+• Blockchain Mining and Proof-of-Work Simulation.
+• REST API Development.
+• Digital Signature Verification.
+• Real-Time Node Synchronization.
+• Consensus Algorithms.
 
-\* Cryptographic Hashing Algorithms
+Author and Developed By
 
-\* Smart Contract Integration
-
-\* REST API Development
-
-\* Distributed Node Communication
-
-\* Blockchain Mining Simulation
-
-\* Real-Time Peer Synchronization
-
-
-
-\---
-
-
-
-\## 📸 Screenshots
-
-
-
-Screenshots demonstrating application functionality are available in the project documentation.
-
-
-
-\---
-
-
-
-\## 👨‍💻 Author
-
-
-
-\*\*Sanjay Kumar Peddaboina\*\*
-
+Sanjay Kumar Peddaboina
